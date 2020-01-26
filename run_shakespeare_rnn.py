@@ -5,8 +5,7 @@ import os
 import time
 
 # Read the data
-path_to_file = tf.keras.utils.get_file('shakespeare.txt', 'https://storage.googleapis.com/download.tensorflow.org/data/shakespeare.txt')
-txt = open(path_to_file, 'rb').read().decode(encoding='utf-8')
+txt = open('shakespeare.txt', 'rb').read().decode(encoding='utf-8')
 vocab = sorted(set(txt))  # unique characters in the file
 
 # Vectorize the text
@@ -19,8 +18,6 @@ txt_as_int = np.array([char2idx[c] for c in txt])  # characters in text converte
 Takes in a sequence and returns two variables: 
 one without the last character (input), one without the first character (target)
 """
-
-
 def split_input_target(chunk):
     input_text = chunk[:-1]
     target_text = chunk[1:]
@@ -45,8 +42,6 @@ Create a sequential, or linear stack of layers. This sequential will be three la
 2. GRU: Type of RNN with size rnn_units
 3. Output layer (Dense): vocab_size units
 """
-
-
 def build_model(vocab_size, embedding_dim, rnn_units, batch_size):
     model = tf.keras.Sequential([
         tf.keras.layers.Embedding(vocab_size, embedding_dim, batch_input_shape=[batch_size, None]),
@@ -65,8 +60,6 @@ model = build_model(vocab_size, embedding_dim, rnn_units, batch_size)
 """
 Cross Entropy loss function
 """
-
-
 def loss(labels, logits):
     return tf.keras.losses.sparse_categorical_crossentropy(labels, logits, from_logits=True)
 
@@ -87,12 +80,15 @@ history = model.fit(dataset, epochs=epochs, callbacks=[checkpoint_callback])
 # Restore latest checkpoint
 tf.train.latest_checkpoint(checkpoint_dir)
 model = build_model(vocab_size, embedding_dim, rnn_units, batch_size=1)  # Batch size 1 to keep prediction simple
-model.load_weights(tf.train(latest_checkpoint(checkpoint_dir)))
+model.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
 model.build(tf.TensorShape([1, None]))
 model.summary()
 
-
-def generate(model, start_string):
+# Prediction loop
+"""
+Generate text using the learned model
+"""
+def generate_text(model, start_string):
     num_generate = 1000  # number of characters to generate
     input_eval = tf.expand_dims([char2idx[s] for s in start_string], 0)  # Convert start string to numbers
     text_generated = []

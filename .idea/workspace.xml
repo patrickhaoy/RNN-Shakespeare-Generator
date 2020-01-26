@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="118baf9b-8ab3-4654-88d0-bfe58487d180" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_shakespeare_rnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_shakespeare_rnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shakespeare.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +31,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="run_shakespeare_rnn" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -86,21 +91,21 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1379" height="271" key="GridCell.Tab.0.bottom" timestamp="1580009878936">
+    <state width="1379" height="271" key="GridCell.Tab.0.bottom" timestamp="1580012203377">
       <screen x="0" y="23" width="3440" height="1337" />
     </state>
-    <state width="1379" height="271" key="GridCell.Tab.0.bottom/0.23.3440.1337@0.23.3440.1337" timestamp="1580009878936" />
-    <state width="1379" height="271" key="GridCell.Tab.0.center" timestamp="1580009878934">
+    <state width="1379" height="271" key="GridCell.Tab.0.bottom/0.23.3440.1337@0.23.3440.1337" timestamp="1580012203377" />
+    <state width="1379" height="271" key="GridCell.Tab.0.center" timestamp="1580012203375">
       <screen x="0" y="23" width="3440" height="1337" />
     </state>
-    <state width="1379" height="271" key="GridCell.Tab.0.center/0.23.3440.1337@0.23.3440.1337" timestamp="1580009878934" />
-    <state width="1379" height="271" key="GridCell.Tab.0.left" timestamp="1580009878931">
+    <state width="1379" height="271" key="GridCell.Tab.0.center/0.23.3440.1337@0.23.3440.1337" timestamp="1580012203375" />
+    <state width="1379" height="271" key="GridCell.Tab.0.left" timestamp="1580012203373">
       <screen x="0" y="23" width="3440" height="1337" />
     </state>
-    <state width="1379" height="271" key="GridCell.Tab.0.left/0.23.3440.1337@0.23.3440.1337" timestamp="1580009878931" />
-    <state width="1379" height="271" key="GridCell.Tab.0.right" timestamp="1580009878935">
+    <state width="1379" height="271" key="GridCell.Tab.0.left/0.23.3440.1337@0.23.3440.1337" timestamp="1580012203373" />
+    <state width="1379" height="271" key="GridCell.Tab.0.right" timestamp="1580012203376">
       <screen x="0" y="23" width="3440" height="1337" />
     </state>
-    <state width="1379" height="271" key="GridCell.Tab.0.right/0.23.3440.1337@0.23.3440.1337" timestamp="1580009878935" />
+    <state width="1379" height="271" key="GridCell.Tab.0.right/0.23.3440.1337@0.23.3440.1337" timestamp="1580012203376" />
   </component>
 </project>
